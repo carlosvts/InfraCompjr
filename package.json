@@ -21,6 +21,7 @@
   },
   "scripts": {
     "start": "yarn-or-npm run test:prod",
+    "test": "npm run test:dev",
     "test:dev": "TARGET=dev jest",
     "test:prod": "TARGET=prod jest",
     "lint": "eslint ./src",
