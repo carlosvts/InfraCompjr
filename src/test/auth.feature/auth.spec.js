@@ -3,13 +3,6 @@ const Client = require("../../client");
 const AuthApi = require("../../api/auth.api");
 const authValidations = require("../lib/auth.validations");
 
-// mockando a pagina de login
-const { mockLoginSuccess } = require("../mocks/request.mock.js");
-
-beforeEach(() => {
-  mockLoginSuccess();
-});
-
 let client;
 let authApi;
 beforeAll(async () => {

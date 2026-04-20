@@ -1,13 +1,13 @@
+// mocka login 
 const nock = require("nock");
 
-function mockLoginSuccess() {
+function mockLogin() {
   return nock("https://reqres.in")
+    .persist()
     .post("/api/login")
     .reply(200, {
       token: "fake-token"
     });
 }
 
-module.exports = {
-  mockLoginSuccess
-};
+module.exports = { mockLogin };

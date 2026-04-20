@@ -12,6 +12,9 @@ module.exports = {
   "setupFiles": [
       `<rootDir>/src/env/${target}.js` //
   ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/test/setup.js"
+  ],
   "reporters": [
     "default",
     [
