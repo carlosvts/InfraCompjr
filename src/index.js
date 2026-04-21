@@ -18,9 +18,12 @@ app.get("/health", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("API rodando, Comp! 🚀");
+  res.json({
+    status: "ok",
+    service: "jest-supertest-starter",
+    health: "/health"
+  });
 });
-
 // porta para o Render
 const PORT = process.env.PORT || 3000;
 
