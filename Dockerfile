@@ -28,4 +28,4 @@ ENV TARGET=prod
 EXPOSE 3000
 
 # Comando padrão: roda os testes e mantém o container vivo para debug
-CMD ["npm", "run", "test:prod"]
+CMD ["npm", "start"]
