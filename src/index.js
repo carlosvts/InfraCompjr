@@ -1,6 +1,6 @@
 const express = require("express");
 
-// importa tua API
+// importa API
 const { users, auth, register } = require("./api");
 
 const app = express();
