@@ -20,7 +20,7 @@ app.get("/health", (req, res) => {
 app.get("/", (req, res) => {
   res.json({
     status: "ok",
-    service: "jest-supertest-starter",
+    service: "ci-cd | compjr",
     health: "/health"
   });
 });
