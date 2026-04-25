@@ -109,3 +109,5 @@ dist
 /.vscode/
 yarn.lock
 
+# sonarqube
+.scannerwork

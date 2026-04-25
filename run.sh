@@ -4,7 +4,7 @@
 case "$1" in
   test)      docker compose run --rm app ;;
   test:prod) docker compose --profile prod run --rm app-prod ;;
-  ci)        docker compose --profile ci up --abort-on-container-exit ;;
+  ci)        docker compose --profile ci up ;;
   report)    docker compose run --rm app && docker compose --profile report up report ;;
   build)     docker compose build ;;
   clean)     docker compose --profile prod --profile ci --profile report down -v --remove-orphans ;;

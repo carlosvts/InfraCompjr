@@ -1,5 +1,3 @@
-version: "3.9"
-
 networks:
   app-network:
     driver: bridge
@@ -7,6 +5,8 @@ networks:
 volumes:
   test-reports:
     driver: local
+  sonar-data:
+    driver: local 
 
 services:
 
@@ -69,6 +69,8 @@ services:
       - app-network
     restart: unless-stopped
 
+
+  # profile ci 
   ci:
     build:
       context: .
@@ -102,6 +104,8 @@ services:
 
   sonar-db:
     image: postgres:15-alpine
+    volumes:
+      - sonar-data:/var/lib/postgresql/data
     container_name: sonar-db
     profiles:
       - ci
@@ -142,12 +146,16 @@ services:
       - ./:/usr/src
     environment:
       SONAR_HOST_URL: ${SONAR_HOST_URL}
-      SONAR_LOGIN: ${SONAR_LOGIN}
+      SONAR_TOKEN: ${SONAR_TOKEN}
     networks:
       - app-network
     entrypoint: >
       sh -c "
-        echo '⏳ Aguardando SonarQube iniciar...' &&
-        sleep 30 &&
+        echo '⏳ Aguardando SonarQube ficar pronto...' &&
+        until curl -s http://sonarqube:9000/api/system/status | grep -q 'UP'; do
+          echo '⏳ Subindo Sonar...';
+          sleep 5;
+        done &&
+        echo '🚀 Sonar pronto! Rodando scanner...' &&
         sonar-scanner
       "
