@@ -100,6 +100,8 @@ Após subir:
 
 `http://localhost:9000`
 
+O login por padrão vem como admin e senha admin
+
 ---
 
 Build das imagens:
@@ -116,9 +118,9 @@ Limpar containers e volumes:
 
 ## Observações Importantes
 
-- O SonarQube pode levar até alguns minutos para iniciar completamente  
+- O SonarQube pode levar até alguns minutos para iniciar completamente. O docker-compose reconhece isso e envia uma mensagem de aguardo  
 - É necessário gerar um token de acesso no SonarQube para o scanner funcionar  
-- O projeto utiliza variáveis via arquivo .env para segurança  
+- O projeto utiliza variáveis via arquivo .env para segurança. Por ser um projeto trainee, o .env-example contem SIM as variáveis secretas as quais só foram adicionadas nesse arquivo para facilitar a avaliação
 
 ---
 
