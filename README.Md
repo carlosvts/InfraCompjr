@@ -38,18 +38,31 @@ O foco principal não foi apenas fazer funcionar, mas entender como as ferrament
 
 .
 ├── .github/workflows         // Pipeline CI/CD (GitHub Actions)
+
 ├── docker-compose.yml        // Orquestração dos containers e profiles (dev, prod, ci, report)
+
 ├── Dockerfile                // Build da imagem Node (multi-stage: deps + runner)
+
 ├── jest.config.js            // Configuração dos testes (ambientes, setup, reporters)
+
 ├── .env-example              // Exemplo de variáveis de ambiente necessárias
+
 ├── nginx.conf                // Configuração do NGINX para servir relatório de testes
+
 ├── package.json              // Dependências e scripts do projeto
+
 ├── package-lock.json         // Lock de dependências (instalação determinística)
+
 ├── problemas_encontrados.MD  // Documentação dos desafios e aprendizados do projeto
+
 ├── README-jest.md            // Readme original do projeto Node com testes unitários
+
 ├── README.md                 // Documentação principal do projeto (infraestrutura DevOps)
+
 ├── run.sh                    // Script de automação para executar os perfis do docker-compose
+
 ├── sonar-project.properties  // Configuração do SonarQube (análise de qualidade)
+
 └── src                       // Código-fonte da aplicação e testes
 
 ---
