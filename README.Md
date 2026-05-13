@@ -102,6 +102,8 @@ Após subir:
 
 O login por padrão vem como admin e senha admin
 
+> Atenção: O Sonarqube precisa de um token para funcionar corretamente, na primeira vez que iniciar o projeto, pode ser que ele não funcione, isso é normal. É necessário gerar um token dentro do website, colocá-lo no campo SONAR_TOKEN e rodar novamente o comando para que ele fique persistente no banco de dados.
+
 ---
 
 Build das imagens:
