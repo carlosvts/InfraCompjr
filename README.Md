@@ -116,6 +116,8 @@ Limpar containers e volumes:
 
 `./run.sh clean`
 
+> Atenção, fazer isso vai limpar também o token persistente no banco de dados em relação ao Sonarqube, isso pode fazer com que seja necessário configurá-lo novamente.
+
 ---
 
 ## Observações Importantes
