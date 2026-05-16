@@ -2,7 +2,7 @@
 
 Trainee: Carlos Vinicius Teixeira de Souza  
 
-Link de apresentação: TODO  
+Link de apresentação: https://youtu.be/O1wYt23AfFM?si=SKJlQwxJR0fqSBHx  
 
 ---
 
